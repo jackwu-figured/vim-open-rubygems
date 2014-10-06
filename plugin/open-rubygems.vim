@@ -12,6 +12,7 @@ function! s:OpenRubyGems(...)
   let gem_name = substitute(gem_name, '[^a-zA-Z0-9_-]', '', 'g')
 
   :call system("open http://rubygems.org/gems/" . gem_name)
+  exec 'Open'.' '.'http://apidock.com/rails/search/quick?query=' . gem_name
 endfunction
 
 let &cpo= s:keepcpo
